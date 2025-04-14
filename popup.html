@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DuckWeb Credentials</title>
+        <style>
+            body { font-family: sans-serif; width: 250px; padding: 10px; }
+            label { display: block; margin-bottom: 5px; }
+            input[type="text"], input[type="password"] { width: 95%; margin-bottom: 10px; padding: 5px; }
+            button { padding: 8px 15px; cursor: pointer; }
+            #status { margin-top: 10px; font-size: 0.9em; color: green; }
+        </style>
+    </head>
+    <body>
+        <h3>DuckWeb Credentials</h3>
+        <label for="username">Username (UO ID):</label>
+        <input type="text" id="username">
+
+        <label for="password">Password (PAC):</label>
+        <input type="password" id="password">
+
+        <button id="saveButton">Save Credentials</button>
+        <div id="status"></div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
