@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
     const saveButton = document.getElementById('saveButton');
-    const statusDiv = document.getElementById('status');
 
     // Load any saved credentials when the popup opens
     chrome.storage.sync.get(['duckwebUsername', 'duckwebPassword'], function(items) {
@@ -23,10 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'duckwebUsername': username,
             'duckwebPassword': password
         }, function() {
-            // Notify the user that settings were saved
-            statusDiv.textContent = 'Credentials saved!';
-            setTimeout(() => { statusDiv.textContent = ''; }, 2000); // Clear message after 2s
-            // Optionally close the popup after saving
+            // Close the popup after saving
             window.close();
         });
     });
